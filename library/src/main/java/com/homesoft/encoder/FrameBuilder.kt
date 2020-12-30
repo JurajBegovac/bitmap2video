@@ -207,6 +207,7 @@ class FrameBuilder(
     }
 
     fun muxAudioFrames() {
+        if(audioExtractor == null) return
         val sampleSize = 256 * 1024
         val offset = 100
         val audioBuffer = ByteBuffer.allocate(sampleSize)
